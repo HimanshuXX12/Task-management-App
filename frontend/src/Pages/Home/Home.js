@@ -49,7 +49,7 @@ function Home() {
 
     const logger= async ()=>{
         localStorage.removeItem("token");
-        window.location.reload();
+         window.location.replace("/login");
     }
 
     console.log("token",localStorage.getItem("token"));

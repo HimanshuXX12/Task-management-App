@@ -6,7 +6,8 @@ import Task from '../Tasks/Task/Task';
 import axios from 'axios';
 import './Done.css'
 
-function Done() {
+function Done() 
+{
       const [tasks,settasks]= useState([]);
       const [task,settask]= useState(null);
       useEffect(()=>{
@@ -17,7 +18,7 @@ function Done() {
      
            for( let i=0;i<element.length;i++)
            {
-               console.log("element",element[i]);
+             
               if(element[i].innerHTML=="Due")
               {
                  
@@ -37,7 +38,7 @@ function Done() {
         if(task.status=="Due")
         {
            
-           const res= await axios.put(`http://localhost:700/tasks/status/${task._id}`,{
+           const res= await axios.put(`https://task-management-app-p4k9.onrender.com/tasks/status/${task._id}`,{
                status:"Completed",
                token:localStorage.getItem("token")
            })
@@ -45,7 +46,7 @@ function Done() {
         }
         else
         {
-           const res= await axios.put(`http://localhost:700/tasks/status/${task._id}`,{
+           const res= await axios.put(`https://task-management-app-p4k9.onrender.com/tasks/status/${task._id}`,{
                status:"Due",
                token:localStorage.getItem("token")
            })
@@ -70,19 +71,33 @@ const taskclick=async (task)=>{
 
   
 
-      const finder= async ()=>{
+      const finder= async ()=>
+        {
         
-        const res= await axios.get("http://localhost:700/tasks",{params});
+        const res= await axios.get("https://task-management-app-p4k9.onrender.com/tasks",{params});
        
         if(res.data.sucess)
+        {
+             const fillter_data= res.data.task.filter((task)=>task.status=="Completed");
+
+             if(fillter_data.length==0)
+             {
+                alert("No Completed task at this moment");
+            }
+            else
             {
+                console.log("filter under done.js",res.data.task);
                 settasks(res.data.task);
-            }
-            else{
-              alert(res.data.error);
-            }
-            
+                
+             }
+
         }
+        else
+        {
+             alert(res.data.error);
+        }
+    }
+    console.log("done.js",tasks);
 
   return (
     <div className='task-done'>
@@ -116,4 +131,4 @@ const taskclick=async (task)=>{
   )
 }
 
-export default Done
+export default Done;

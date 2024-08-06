@@ -50,7 +50,7 @@ function LoginSignUp() {
 
     const Submitter= async ()=>{
         // signup
-        const url="http://localhost:700/signup"
+        const url="https://task-management-app-p4k9.onrender.com/signup"
         const res= await axios.post(url,formData);
         if(res.data.sucess)
         {
@@ -65,7 +65,7 @@ function LoginSignUp() {
 
     const logger= async  ()=>{
         // login
-        const url="http://localhost:700/login";
+        const url="https://task-management-app-p4k9.onrender.com/login";
         const res= await axios.post(url,formData)
          if(res.data.sucess)
          {
@@ -88,11 +88,11 @@ function LoginSignUp() {
         <h1 className='font-bold'>TASK MANAGER</h1>
         <p className='font-bold'>{value}</p>
         <div>
-           <input type='email' onChange={changehandler} placeholder='email' name='email' className='inputer  '/>
+           <input type='email' onChange={changehandler} placeholder='Email' name='email' className='inputer  '/>
            <hr/>
         </div>
         <div>
-        <input type='password' onChange={changehandler} placeholder='password' name='password' className='inputer'/>
+        <input type='password' onChange={changehandler} placeholder='Password' name='password' className='inputer'/>
         <hr/>
         </div>
         {/* {

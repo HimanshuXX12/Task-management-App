@@ -11,7 +11,7 @@ function CreateDiagloge(props) {
     })
 
     const createHandller= async ()=>{
-         const res= await axios.post("http://localhost:700/tasks",formdata);
+         const res= await axios.post("https://task-management-app-p4k9.onrender.com/tasks",formdata);
         if(res.data.sucess)
         {
             alert(res.data.error);

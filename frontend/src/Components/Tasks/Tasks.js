@@ -42,7 +42,7 @@ function Tasks() {
          if(task.status=="Due")
          {
             
-            const res= await axios.put(`http://localhost:700/tasks/status/${task._id}`,{
+            const res= await axios.put(`https://task-management-app-p4k9.onrender.com/tasks/status/${task._id}`,{
                 status:"Completed",
                 token:localStorage.getItem("token")
             })
@@ -50,7 +50,7 @@ function Tasks() {
          }
          else
          {
-            const res= await axios.put(`http://localhost:700/tasks/status/${task._id}`,{
+            const res= await axios.put(`https://task-management-app-p4k9.onrender.com/tasks/status/${task._id}`,{
                 status:"Due",
                 token:localStorage.getItem("token")
             })
@@ -76,11 +76,24 @@ function Tasks() {
 
     const finder= async ()=>{
         
-        const res= await axios.get("http://localhost:700/tasks",{params});
+        const res= await axios.get("https://task-management-app-p4k9.onrender.com/tasks",{params});
        
         if(res.data.sucess)
             {
-                settasks(res.data.task);
+                const fillter_data= res.data.task.filter((task)=>task.status=="Due");
+                if(fillter_data.length==0)
+                {
+                    alert("No Due Data at this moment");
+                }
+                else
+                {
+
+                    settasks(res.data.task);
+                }
+            }
+            else
+            {
+                alert(res.data.error);
             }
             
         }

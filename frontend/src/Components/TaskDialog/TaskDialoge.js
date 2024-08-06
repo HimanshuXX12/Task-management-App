@@ -18,7 +18,7 @@ function TaskDialoge(props) {
      },[]);
 
      const deleter= async (task)=>{
-          const res= await axios.delete(`http://localhost:700/tasks/${task._id}`)
+          const res= await axios.delete(`https://task-management-app-p4k9.onrender.com/tasks/${task._id}`)
           if(res.data.sucess)
           {
              alert("Sucessfull deleted task");
@@ -30,7 +30,7 @@ function TaskDialoge(props) {
      }
 
      const updatter= async (task)=>{
-           const res= await axios.put(`http://localhost:700/tasks/${task._id}`,{
+           const res= await axios.put(`https://task-management-app-p4k9.onrender.com/tasks/${task._id}`,{
               token:localStorage.getItem("token"),
               data:{
                 description:text,
@@ -46,7 +46,7 @@ function TaskDialoge(props) {
 
      const fetchDescription= async ()=>{
      
-        const res= await axios.put(`http://localhost:700/tasks/${props.task._id}`,{
+        const res= await axios.put(`https://task-management-app-p4k9.onrender.com/tasks/${props.task._id}`,{
             token:localStorage.getItem("token")
         });
 

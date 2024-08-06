@@ -10,7 +10,7 @@ function AuthContextPorvider(props)
       const [all_task,setAlltask]= useState([]);
    const caller= async ()=>{
        
-            const res= await axios.get("http://localhost:700/tasks",{
+            const res= await axios.get("https://task-management-app-p4k9.onrender.com/tasks",{
                 token:localStorage.getItem("token")
              });
      
