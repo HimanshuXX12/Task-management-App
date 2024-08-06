@@ -12,7 +12,7 @@ const cookieParser=require('cookie-parser');
 app.use(cookieParser());
 route(app);
 
-const db_link=`mongodb+srv://himanshu2k20_ee_122:${process.env.PASSWORD}@cluster0.soa6hat.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const db_link=process.env.URL;
 mongoose.connect(db_link).then(()=>{
        console.log("Database is connected");
 })
