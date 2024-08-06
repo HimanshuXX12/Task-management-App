@@ -1,0 +1,79 @@
+.task-creation{
+    background-color: red;
+}
+
+
+.createdialoge-page{
+    
+
+
+}
+
+.create-lower{
+    display: flex;
+    justify-content: space-around;
+    gap:2rem;
+    
+}
+
+/* #due_date{
+    width:180px;
+} */
+
+
+.input{
+    padding:0.5rem;
+    width:100%;
+    color: black;
+    font-weight: bold;
+    /* border: none; */
+    background-color: #dfe6f3;
+    border: 1px solid black;
+    /* outline: none; */
+
+}
+
+.input:focus{
+   /* border: none; */
+   outline: none;
+}
+
+
+
+.createdialoge-page{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    filter: brightness(1);
+}
+
+
+.createdialoge-page-conntainer{
+    padding: 2rem;
+    width:30vw;   
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: lightskyblue;
+    /* filter: brightness(10); */
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+
+#create-desc{
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 1.3rem 1rem;
+    font-weight: normal;
+}
+
+#create-desc::-webkit-scrollbar{
+    display: none;
+}

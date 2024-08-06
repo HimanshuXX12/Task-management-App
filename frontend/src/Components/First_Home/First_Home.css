@@ -1,0 +1,12 @@
+.first-home{
+   height: 80%;
+   width: 80w;
+}
+
+.first-home-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

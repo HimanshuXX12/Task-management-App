@@ -1,0 +1,58 @@
+
+.task{
+    /* background-color: white; */
+    background-color: rgb(177, 219, 245);
+    padding: 1rem;
+    height: 120px;
+    border-radius: 10px;
+    /* overflow-y: scroll;
+    scrollbar-width: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+    
+}
+
+.task h1{
+    font-weight: bold;
+    text-align: center;
+  
+}
+
+/* .task p{
+    font-size: 10px;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    color: blue;
+} */
+
+.description{
+     background-color: rgb(238, 251, 255);
+     padding: 1rem;
+     text-align: center;
+ 
+}
+
+/* .task::-webkit-scrollbar{
+    display: none;
+} */
+
+
+.inner-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    align-items: center;
+    /* margin-top:0.8rem; */
+    /* gap:1rem */
+   
+
+}
+
+.date{
+    font-size: 10px;
+}
+
+

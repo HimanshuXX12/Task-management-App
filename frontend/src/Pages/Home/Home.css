@@ -1,0 +1,33 @@
+.left-home{
+    background-color: white;
+    width: 18%;
+}
+
+.right-home{
+    /* background-color: rgb(238, 251, 255); */
+     background-color: #dfe6f3;
+    width: 82%;
+    min-height: 100vh;
+
+}
+
+
+.home_page{
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+}
+
+.boxes{
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: hsl(0deg 0% 95.43%);
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+.filled{
+    /* background-color: rgb(238, 251, 255); */
+    background-color: rgb(165 234 255);
+}

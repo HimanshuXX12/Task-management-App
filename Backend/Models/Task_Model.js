@@ -2,7 +2,7 @@ const mongoose= require("mongoose");
 
 const schema= mongoose.Schema({
      description:{
-        type:true,
+        type:String,
         required:true
      },
      title:{
@@ -10,10 +10,14 @@ const schema= mongoose.Schema({
          required:true
      },
      due_date:{
-        type:Date,
+        type:String,
         required:true,
      },
      status:{
+         type:String,
+         required:true
+     },
+     email:{
          type:String,
          required:true
      }
@@ -22,5 +26,5 @@ const schema= mongoose.Schema({
 
 const Task_Model= mongoose.model("task",schema);
 
-module.exports=Task_Model_Model;
+module.exports=Task_Model;
 

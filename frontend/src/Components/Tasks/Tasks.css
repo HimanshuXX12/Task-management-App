@@ -1,0 +1,38 @@
+.tasks-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:2rem;
+   column-gap:2rem ;
+    padding: 2rem;
+}
+
+.status-btn{
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+    padding:0.5rem 1.5rem;
+    font-size: 12px;
+    border-radius: 10%;
+}
+
+
+.due{
+    background-color: red;
+}
+
+.completed
+{
+    background-color: lightgrey;
+}
+
+.tasks{
+    /* min-height: 100vh; */
+}
+
+
+.tanker{
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
