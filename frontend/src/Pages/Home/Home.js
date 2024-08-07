@@ -61,7 +61,7 @@ function Home() {
               <Link to="/"> <div className='boxes' id="home" onClick={()=>clicker("home")} >Home</div></Link>
               <Link to="/tasks"> <div className='boxes' onClick={()=>clicker("tasks")} id="tasks">Tasks Due</div></Link>
               <Link to="/tasks/done">  <div className='boxes' onClick={()=>clicker("done")} id="done">Task's Done</div></Link>
-                <div className='boxes' onClick={logger}><Link ><button>Logout</button></Link></div>
+                <div className='boxes' onClick={logger}><button className='log-btn'>Logout</button></div>
 
             </div>
         </div>

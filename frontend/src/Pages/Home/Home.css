@@ -26,8 +26,26 @@
     background-color: hsl(0deg 0% 95.43%);
     margin: 0.5rem;
     border-radius: 10px;
+    border: none;
 }
 .filled{
     /* background-color: rgb(238, 251, 255); */
     background-color: rgb(165 234 255);
+}
+
+.boxes:focus{
+    /* border: none; */
+    outline: none;
+
+}
+
+
+.linker{
+    text-transform: none;
+}
+
+
+.log-btn:focus{
+    border: none;
+    outline: none;
 }

@@ -53,8 +53,8 @@
 .inputer:focus{
     /* outline: none;
     border: none; */
-    border: 2px dotted black;
-    outline: green;
+    /* border: 2px dotted black; */
+    outline: 2px solid  black;
 }
 
 .inputer:-webkit-autofill
@@ -76,6 +76,11 @@
 
 .btn:hover{
     background-color: hsl(226, 94%, 74%);
+}
+
+.btn:hover{
+    border: none;
+    outline: none;
 }
 
 

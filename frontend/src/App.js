@@ -10,6 +10,7 @@ function App() {
          <BrowserRouter>
            <Routes>
              <Route path='*' element={localStorage.getItem("token")?<Home/>:<LoginSignUp/>}/>
+             <Route path='/login' element={localStorage.getItem("token")?<Home/>:<LoginSignUp/>}/>
            </Routes>
          </BrowserRouter>
     </div>
