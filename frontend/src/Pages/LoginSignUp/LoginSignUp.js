@@ -73,9 +73,14 @@ function LoginSignUp() {
              localStorage.setItem("token",res.data.token);
              window.location.replace("/");
          }
-         else{
+         else if(res.data.sucess===null)
+         {
             alert(res.data.error);
             inputer('Register');
+         }
+         else if(!res.data.sucess)
+            {
+            alert(res.data.error);
          }
 
     }

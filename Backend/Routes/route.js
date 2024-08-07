@@ -85,7 +85,7 @@ function route(app)
          const user= await user_model.findOne({email:email});
          if(!user)
          {
-            res.json({error:"No User Exists with this mail Id",sucess:false});
+            res.json({error:"No User Exists with this mail Id",sucess:null});
          }
          else{
              bcrypt.compare(password,user.password,function(err,data)
@@ -102,8 +102,9 @@ function route(app)
                       res.json({error:"Logined Sucessfully",token:token,sucess:true});
 
                   }
-                  else{
-                     res.json({error:"Password did not Matched"});
+                  else
+                  {
+                     res.json({error:"Password did not Matched",sucess:false});
                   }
             })  
          }
